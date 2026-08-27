@@ -1,0 +1,39 @@
+Description des Choix de Conception - TechStore
+1. Structure HTML (Sémantique)
+Header sticky : Navigation toujours visible au scroll pour une meilleure navigation
+Sections claires : <header>, <section>, <footer> pour une hiérarchie logique
+Articles semantiques : Chaque produit est un <article> avec image, titre, description et CTA
+2. Système de couleurs
+Bleu primaire (#2563eb) : Confiance, professionnalisme, technologie
+Orange d'accent (#f97316) : Boutons "Acheter" pour créer du contraste et attirer l'attention
+Gris neutres : Texte lisible et hiérarchie visuelle claire
+Fond blanc/gris clair : Moderne, épuré, facile à lire
+3. Typographie
+Georgia pour les titres : Élégant, premium
+Segoe UI pour le corps : Lisible, moderne
+Hiérarchie claire :H1 (3rem) → H2 (2.5rem) → H3 (1.3rem)
+Line-height 1.6 : Espacement vertical pour fluidité de lecture
+4. Layout - Flexbox & Grid
+Header (Flexbox) : Logo, nav et panier alignés avec space-between
+Hero (Flexbox) : Texte à gauche, visuels à droite, wrap sur mobile
+Produits (CSS Grid) : 4 colonnes adaptables (4 → 2 → 1)
+Footer (Flexbox) : 4 colonnes côte à côte, empile sur mobile
+5. Responsive Design (Mobile-First)
+Media queries à 1024px : Passer de 4 à 2 colonnes produits
+Media queries à 768px : Empiler éléments, réduire espacements
+Media queries à 480px : Police réduite pour très petits écrans
+Flex-wrap : Les éléments s'adaptent naturellement
+6. Interactions & Transitions
+Hover cartes produits : Soulèvement (translateY(-8px)) + ombre aggrandie
+Transition 0.3s : Changement doux et agréable
+Hover boutons : Changement couleur + petit déplacement vers le haut
+Sticky header : Reste visible pour navigation rapide
+7. Accessibilité & UX
+Contraste : Bleu sur blanc = lisible (WCAG AA)
+Boutons clairs : "Acheter" bien visible en orange
+Espacement : gap au lieu de margins pour alignement cohérent
+Box-sizing: border-box : Contrôle prévisible des dimensions
+8. Performance
+CSS optimisé : Pas d'animations lourdes, transitions rapides (0.2-0.3s)
+Classes réutilisables : .btn, .container pour maintenabilité
+Minimaliste : Pas de frameworks externes, CSS pur
