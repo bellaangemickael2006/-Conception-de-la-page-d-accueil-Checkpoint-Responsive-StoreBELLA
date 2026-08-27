@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStore — Boutique en ligne</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- ===== EN-TÊTE avec navigation ===== -->
+    <header class="header">
+      <div class="container">
+        <!-- Logo -->
+        <div class="logo">⚡ TechStore</div>
+
+        <!-- Navigation (FLEXBOX : éléments côte à côte) -->
+        <nav class="navbar">
+          <a href="#accueil" class="nav-link">Accueil</a>
+          <a href="#produits" class="nav-link">Produits</a>
+          <a href="#apropos" class="nav-link">À propos</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Bouton panier -->
+        <a href="#" class="btn btn-primary">🛒 Panier</a>
+      </div>
+    </header>
+
+    <!-- ===== HERO SECTION (FLEXBOX) ===== -->
+    <section id="accueil" class="hero">
+      <div class="container hero-wrapper">
+        <!-- Contenu texte -->
+        <div class="hero-content">
+          <h1>Bienvenue chez TechStore</h1>
+          <p>
+            Découvrez les dernières technologies et gadgets innovants à des prix
+            imbattables.
+          </p>
+          <a href="#produits" class="btn btn-large">Voir nos produits</a>
+        </div>
+
+        <!-- Image/illustration héro (utilise du texte comme emoji) -->
+        <div class="hero-image">
+          <img src="./tehc.png" alt="Illustration de produits technologiques" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION PRODUITS (CSS GRID) ===== -->
+    <section id="produits" class="products">
+      <div class="container">
+        <h2>Nos produits populaires</h2>
+
+        <!-- GRID : 4 colonnes qui deviennent 2, puis 1 en responsive -->
+        <div class="products-grid">
+          <!-- CARTE PRODUIT 1 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="./tel.png" alt="Smartphone Pro" />
+            </div>
+            <h3>Smartphone Pro</h3>
+            <p class="product-desc">Écran AMOLED 6.7", 5G, 256GB de stockage</p>
+            <div class="product-footer">
+              <span class="price">799€</span>
+              <a href="#" class="btn btn-small">Acheter</a>
+            </div>
+          </article>
+
+          <!-- CARTE PRODUIT 2 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="./ordinateur.png" alt="Laptop Ultra-Fin" />
+            </div>
+            <h3>Laptop Ultra-Fin</h3>
+            <p class="product-desc">15" FHD, Intel Core i7, 512GB SSD</p>
+            <div class="product-footer">
+              <span class="price">1 299€</span>
+              <a href="#" class="btn btn-small">Acheter</a>
+            </div>
+          </article>
+
+          <!-- CARTE PRODUIT 3 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="./montre.png" alt="Montre Connectée" />
+            </div>
+            <h3>Montre Connectée</h3>
+            <p class="product-desc">
+              Suivi fitness, GPS intégré, 7 jours d'autonomie
+            </p>
+            <div class="product-footer">
+              <span class="price">299€</span>
+              <a href="#" class="btn btn-small">Acheter</a>
+            </div>
+          </article>
+
+          <!-- CARTE PRODUIT 4 -->
+          <article class="product-card">
+            <div class="product-image">
+              <img src="./aphoto.png" alt="aphoto Premium" />
+            </div>
+            <h3>apphoto Premium</h3>
+            <p class="product-desc">
+              Bruit actif, Bluetooth 5.0, 36h d'autonomie
+            </p>
+            <div class="product-footer">
+              <span class="price">399€</span>
+              <a href="#" class="btn btn-small">Acheter</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="apropos" class="about">
+      <div class="container">
+        <h2>À propos de TechStore</h2>
+        <p>
+          Chez TechStore, nous nous engageons à fournir les dernières
+          technologies à nos clients. Notre équipe sélectionne soigneusement
+          chaque produit pour garantir qualité et innovation.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== PIED DE PAGE (FLEXBOX) ===== -->
+    <footer id="contact" class="footer">
+      <div class="container footer-wrapper">
+        <!-- Colonne 1 : Marque -->
+        <div class="footer-column">
+          <h4>⚡ TechStore</h4>
+          <p>Votre destination pour les dernières technologies.</p>
+        </div>
+
+        <!-- Colonne 2 : Liens -->
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <a href="#accueil">Accueil</a>
+          <a href="#produits">Produits</a>
+          <a href="#apropos">À propos</a>
+        </div>
+
+        <!-- Colonne 3 : Légal -->
+        <div class="footer-column">
+          <h4>Légal</h4>
+          <a href="#">Conditions d'utilisation</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">Retours & échanges</a>
+        </div>
+
+        <!-- Colonne 4 : Contact -->
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <p>📧 contact@techstore.com</p>
+          <p>📱 +33 1 23 45 67 89</p>
+        </div>
+      </div>
+
+      <!-- Ligne de copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechStore. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>

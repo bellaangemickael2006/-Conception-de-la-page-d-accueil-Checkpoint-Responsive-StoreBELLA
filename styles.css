@@ -1,0 +1,369 @@
+/* ============================================================
+   CARNET DE STYLE - BOUTIQUE TECHSTORE
+   ============================================================ */
+
+/* RESET GLOBAL : supprime les marges par défaut du navigateur */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* CONCEPT : box-sizing, inclut padding/border dans width */
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Conteneur principal (max-width pour les grands écrans) */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ========== EN-TÊTE / NAVIGATION (FLEXBOX) ========== */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky; /* CONCEPT : POSITIONING - reste en haut pendant le scroll */
+  top: 0;
+  z-index: 100; /* CONCEPT : z-index - reste au-dessus */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+  display: flex; /* FLEXBOX : met les enfants côte à côte */
+  align-items: center; /* FLEXBOX : aligne verticalement au centre */
+  justify-content: space-between; /* FLEXBOX : écarte logo, nav et bouton */
+  gap: 24px;
+  padding: 16px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* Navigation (FLEXBOX) */
+.navbar {
+  display: flex; /* FLEXBOX : met les liens côte à côte */
+  gap: 32px;
+}
+
+.nav-link {
+  color: #1f2937;
+  font-weight: 500;
+  transition: color 0.2s ease; /* CONCEPT : TRANSITION - changement en douceur */
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .header .container {
+    flex-wrap: wrap; /* FLEXBOX : autoriser le retour à la ligne */
+  }
+  .navbar {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ========== BOUTONS ========== */
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease; /* CONCEPT : TRANSITION */
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+.btn-large {
+  padding: 16px 48px;
+  font-size: 1.1rem;
+}
+
+.btn-small {
+  padding: 4px 16px;
+  font-size: 0.9rem;
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+.btn-small:hover {
+  background-color: #d97706;
+}
+
+/* ========== HERO SECTION (FLEXBOX) ========== */
+.hero {
+  background: linear-gradient(
+    135deg,
+    #dbeafe,
+    #f0f9ff
+  ); /* CONCEPT : gradient */
+  padding: 64px 0;
+}
+
+/* FLEXBOX : texte à gauche, image à droite */
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* CONCEPT : wrap - empile sur petit écran */
+  gap: 48px;
+}
+
+.hero-content {
+  flex: 1; /* CONCEPT : flex: 1 - partage équitable de l'espace */
+  min-width: 300px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-family: Georgia, serif;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin-bottom: 24px;
+  max-width: 60ch;
+}
+
+.hero-image {
+  font-size: 6rem;
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+/* Responsive hero */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-wrapper {
+    text-align: center;
+  }
+}
+
+/* ========== SECTION PRODUITS (CSS GRID) ========== */
+.products {
+  padding: 64px 0;
+  background-color: #f9fafb;
+}
+
+.products h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 64px;
+  font-family: Georgia, serif;
+}
+
+/* GRID : 4 colonnes, réactif */
+.products-grid {
+  display: grid; /* CONCEPT : CSS GRID */
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* CONCEPT : 4 colonnes égales (repeat + fr) */
+  gap: 24px;
+}
+
+/* Chaque carte produit */
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease; /* CONCEPT : TRANSITION */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: #2563eb;
+}
+
+.product-image {
+  font-size: 4rem;
+  margin-bottom: 16px;
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.product-desc {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  min-height: 2.5rem;
+}
+
+/* FLEXBOX : aligne prix et bouton côte à côte */
+.product-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* GRID RESPONSIVE */
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr; /* 1 colonne sur téléphone */
+  }
+  .products h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ========== SECTION À PROPOS (FLEXBOX) ========== */
+.about {
+  padding: 64px 0;
+  background-color: #ffffff;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 64px;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-content h2 {
+  font-size: 2.2rem;
+  font-family: Georgia, serif;
+  margin-bottom: 24px;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #1f2937;
+}
+
+.about-image {
+  font-size: 5rem;
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+/* ========== PIED DE PAGE (FLEXBOX) ========== */
+.footer {
+  background-color: #111827;
+  color: #ffffff;
+  padding: 64px 0 16px;
+}
+
+/* FLEXBOX : 4 colonnes côte à côte */
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h4 {
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.footer-column a {
+  display: block;
+  color: #d1d5db;
+  margin-bottom: 8px;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+}
+
+.footer-column p {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* Ligne de copyright */
+.footer-bottom {
+  border-top: 1px solid #374151;
+  padding-top: 24px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+/* RESPONSIVE footer */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column; /* Empile les colonnes verticalement */
+  }
+}
+
+/* ========== RESPONSIVE GLOBAL (MEDIA QUERIES) ========== */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .products h2 {
+    font-size: 1.5rem;
+  }
+}
