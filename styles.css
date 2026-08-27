@@ -1,5 +1,5 @@
 /* ============================================================
-   CARNET DE STYLE - BOUTIQUE TECHSTORE (VERSION MOBILE)
+   CARNET DE STYLE - BOUTIQUE TECHSTORE (CORRIGÉ)
    ============================================================ */
 
 * {
@@ -33,6 +33,7 @@ a {
   top: 0;
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
 }
 
 .header .container {
@@ -106,10 +107,17 @@ a {
   background-color: #d97706;
 }
 
-/* ========== HERO SECTION ========== */
+/* ========== HERO SECTION (FULL WIDTH) ========== */
 .hero {
   background: linear-gradient(135deg, #dbeafe, #f0f9ff);
   padding: 40px 0;
+  width: 100%;
+}
+
+.hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .hero-wrapper {
@@ -150,6 +158,13 @@ a {
 .products {
   padding: 40px 0;
   background-color: #f9fafb;
+  width: 100%;
+}
+
+.products .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .products h2 {
@@ -215,6 +230,13 @@ a {
 .about {
   padding: 40px 0;
   background-color: #ffffff;
+  width: 100%;
+}
+
+.about .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .about-wrapper {
@@ -253,11 +275,18 @@ a {
   text-align: center;
 }
 
-/* ========== PIED DE PAGE ========== */
+/* ========== PIED DE PAGE (FULL WIDTH) ========== */
 .footer {
   background-color: #111827;
   color: #ffffff;
   padding: 40px 0 16px;
+  width: 100%;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .footer-wrapper {
